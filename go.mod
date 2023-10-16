@@ -1,3 +1,3 @@
-module gopkg.in/lunit-io/lumberjack.v2
+module github.com/lunit-io/lumberjack
 
 go 1.20
