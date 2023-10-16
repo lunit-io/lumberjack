@@ -75,6 +75,11 @@ type Logger struct {
     // Compress determines if the rotated log files should be compressed
     // using gzip. The default is not to perform compression.
     Compress bool `json:"compress" yaml:"compress"`
+    
+    // TimeFormat determines the format to use for formatting the timestamp in
+    // backup files. The default format is defined in `DefaultTimeFormat`.
+    TimeFormat string `json:"timeformat" yaml:"timeformat"`
+
     // contains filtered or unexported fields
 }
 ```
