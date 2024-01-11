@@ -450,6 +450,10 @@ func (l *Logger) timeFromName(filename, prefix, ext string) (time.Time, error) {
 		return time.Time{}, errors.New("mismatched extension")
 	}
 	ts := filename[len(prefix) : len(filename)-len(ext)]
+	split := strings.Split(ts, "-")
+	if len(split) == 4 {
+		ts = strings.Join(split[1:], "-")
+	}
 	return time.Parse(l.timeFormat(), ts)
 }
 
